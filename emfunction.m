@@ -62,6 +62,6 @@ Sxp =      kappa * Ss + t6 * ((ps * Ex - px * Es) * Ss - (px * Ey - py * Ex) * S
 Syp =                   t6 * ((px * Ey - py * Ex) * Sx - (py * Es - ps * Ey) * Ss) + (sp1*Bs+sp2*ps)*Sx-(sp1*Bx+sp2*px)*Ss;
 Ssp = (-1)*kappa * Sx + t6 * ((py * Es - ps * Ey) * Sy - (ps * Ex - px * Es) * Sx) + (sp1*Bx+sp2*px)*Sy-(sp1*By+sp2*py)*Sx;
 
-DX = [ xp; yp; tp; pxp/p0; pyp/p0; Wp/(W0*MeV); Sxp; Syp; Ssp; H];
+DX = [ xp; yp; tp; pxp/p0; pyp/p0; Wp/(W0*MeV); Sxp; Syp; Ssp; H; 1];
 
 end

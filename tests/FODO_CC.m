@@ -24,8 +24,8 @@ lattice = [{QDA2}; {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2};
 {QFA2}; {OD1}; {OSF}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QDA2};
  {QDA2}; {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2}];
 
-n=5;
-X0 = [3e-3*ones(1,3) -3e-3:3e-3:3e-3; [-3e-3:3e-3:3e-3] 1e-3*ones(1,3); zeros(6,6); ones(1,6); zeros(1,6)];
+n=10;
+X0 = [3e-3*ones(1,3) -3e-3:3e-3:3e-3; [-3e-3:3e-3:3e-3] 1e-3*ones(1,3); zeros(6,6); ones(1,6); zeros(2,6)];
 X = cell(6);
 for i=1:4
   disp(num2str(i));
@@ -36,10 +36,10 @@ x=[X{1}(1,:); X{2}(1,:); X{3}(1,:); X{4}(1,:)];
 y=[X{1}(2,:); X{2}(2,:); X{3}(2,:); X{4}(2,:)];
 sx=[X{1}(7,:); X{2}(7,:); X{3}(7,:); X{4}(7,:)];
 sy=[X{1}(8,:); X{2}(8,:); X{3}(8,:); X{4}(8,:)];
-H=[X{1}(10,:); X{2}(10,:); X{3}(10,:); X{4}(10,:)];
+s=[X{1}(11,:); X{2}(11,:); X{3}(11,:); X{4}(11,:)];
 
 rng = 3:3
-for i=rng; subplot(2,1,1); plot(H(i,:),x(i,:),'-r',H(i,:),y(i,:),'-b'); hold all; end; legend("x","y");
-for i=rng; subplot(2,1,2); plot(H(i,:),sx(i,:),'-r',H(i,:),sy(i,:),'-b'); hold all; end; legend("Sx","Sy");
+for i=rng; subplot(2,1,1); plot(s(i,:),x(i,:),'-r',s(i,:),y(i,:),'-b'); hold all; end; legend("x","y");
+for i=rng; subplot(2,1,2); plot(s(i,:),sx(i,:),'-r',s(i,:),sy(i,:),'-b'); hold all; end; legend("Sx","Sy");
 
 
