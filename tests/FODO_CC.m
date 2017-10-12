@@ -20,12 +20,12 @@ OD1 = @()emdrift(25e-2);
 OD2 = @()emdrift(25e-2);
 ORB = @()emdrift(220e-2);
 
-lattice = [{QDA2}; {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2};
-{QFA2}; {OD1}; {OSF}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QDA2};
- {QDA2}; {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2}];
+lattice = [{QDA2};];% {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2};
+%{QFA2}; {OD1}; {OSF}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QDA2};
+% {QDA2}; {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2}];
 
-n=10;
-X0 = [3e-3*ones(1,3) -3e-3:3e-3:3e-3; [-3e-3:3e-3:3e-3] 1e-3*ones(1,3); zeros(6,6); ones(1,6); zeros(2,6)];
+n=1;
+X0 = [5e-3*ones(1,3) -5e-3:5e-3:5e-3; [-5e-3:5e-3:5e-3] 1e-3*ones(1,3); zeros(6,6); ones(1,6); zeros(2,6)];
 X = cell(6);
 for i=1:4
   disp(num2str(i));
@@ -41,5 +41,6 @@ s=[X{1}(11,:); X{2}(11,:); X{3}(11,:); X{4}(11,:)];
 rng = 3:3
 for i=rng; subplot(2,1,1); plot(s(i,:),x(i,:),'-r',s(i,:),y(i,:),'-b'); hold all; end; legend("x","y");
 for i=rng; subplot(2,1,2); plot(s(i,:),sx(i,:),'-r',s(i,:),sy(i,:),'-b'); hold all; end; legend("Sx","Sy");
+xlabel("s");
 
 
