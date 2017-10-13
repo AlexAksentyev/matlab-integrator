@@ -43,14 +43,17 @@ tp = H/v;
 
 gp = Wp2gammaprime(Wp);
 
-D = (q/(m*hs))*(xp*By-yp*Bx+H*Es/v)-((g*v)/(H*hs))*3*kappa*xp;
+%D = (q/(m*hs))*(xp*By-yp*Bx+H*Es/v)-((g*v)/(H*hs))*3*kappa*xp;
 
-xpp=((-H*D)/(g*v))*xp+((q*H)/(p))*(H*Ex/v+yp*Bs-hs*By)+kappa*hs;
-ypp=((-H*D)/(g*v))*yp+((q*H)/(p))*(H*Ey/v+hs*Bx-xp*Bs);
+%xpp=((-H*D)/(g*v))*xp+((q*H)/(p))*(H*Ex/v+yp*Bs-hs*By)+kappa*hs;
+%ypp=((-H*D)/(g*v))*yp+((q*H)/(p))*(H*Ey/v+hs*Bx-xp*Bs);
 
 
-pxp = px*(vp/v - gp/g)+p*xpp/H-px*((px*xpp)/(p*H)+(py*ypp)/(p*H)+(hs*kappa*xp)/(H^2));
-pyp = py*(vp/v - gp/g)+p*ypp/H-py*((px*xpp)/(p*H)+(py*ypp)/(p*H)+(hs*kappa*xp)/(H^2));
+%pxp = px*(vp/v - gp/g)+p*xpp/H-px*((px*xpp)/(p*H)+(py*ypp)/(p*H)+(hs*kappa*xp)/(H^2));
+%pyp = py*(vp/v - gp/g)+p*ypp/H-py*((px*xpp)/(p*H)+(py*ypp)/(p*H)+(hs*kappa*xp)/(H^2));
+
+pxp = q*(Ex*tp + (yp*Bs - By)/c) + kappa*ps
+pyp = q*(Ey*tp + (Bx - xp*Bs)/c)
 
 t5 = H/v;
 t6 =  t5* (q / (g * m * m * c * c)) * (G + 1/(1 + g));

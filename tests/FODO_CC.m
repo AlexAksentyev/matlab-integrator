@@ -24,7 +24,7 @@ lattice = [{QDA2}; {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2};
 {QFA2}; {OD1}; {OSF}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QDA2};
  {QDA2}; {OD1}; {OSD}; {OD2}; {ORB}; {OD2}; {BPM}; {OD1}; {QFA2}];
 
-n=10;
+n=5;
 X0 = [3e-3*ones(1,3) -3e-3:3e-3:3e-3; [-3e-3:3e-3:3e-3] 1e-3*ones(1,3); zeros(6,6); ones(1,6); zeros(2,6)];
 X = cell(6);
 for i=1:4
