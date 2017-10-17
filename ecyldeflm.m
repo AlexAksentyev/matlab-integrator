@@ -44,7 +44,7 @@ function By = By(t,x, y, s, E0, R)
     B = -E0/v;
     k = k * 1.18;
     
-    By = 0.018935*(-B)*(-1/R + k*B*v)*x*0;
+    By = 0.018935*(-B)*(-1/R + k*B*v)*x;
 end
 function Bs = Bs(t, x, y, s)
     Bs = 0;
